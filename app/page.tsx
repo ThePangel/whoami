@@ -7,7 +7,6 @@ import { motion } from "motion/react";
 
 export default function Home() {
   const videoRef = useRef<HTMLVideoElement>(null);
-  const basePath = process.env.NODE_ENV === "production" ? "/whoami" : "";
 
   useEffect(() => {
     if (videoRef.current) {
@@ -82,7 +81,7 @@ export default function Home() {
         playsInline
         preload="auto"
       >
-        <source src={`${basePath}/assets/Moon.mp4`} type="video/mp4" />
+        <source src={`/assets/Moon.mp4`} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
     </div>
